@@ -1,0 +1,54 @@
+body{
+    background-color: black;
+    margin: 0;
+}
+
+h1{
+    color: white;
+    font-family: 'Dancing Script',cursive;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 48px;
+}
+#grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto  ;/*qacha auto kop yozilsa shuncha qatorda rasm kopayadi*/
+    grid-gap: 16px;
+    /* justify-content: space-around; */
+    /* row-gap: 32px; */
+    /* column-gap: 48px;  */
+  
+}
+
+.movie-poster{
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+}
+.movie-poster:hover{
+    animation: zoom 2s forwards;
+}
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+        box-shadow: 0 2px 5px #ccc;
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width:1024px){
+    #grid-container{
+
+        grid-template-columns: auto auto auto;
+        justify-content: space-around;
+    }
+}
+@media (max-width:400px){
+    #grid-container{
+
+        grid-template-columns: auto;
+        justify-content: space-around;
+    }
+}
